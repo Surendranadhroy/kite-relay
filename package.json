@@ -1,0 +1,16 @@
+{
+  "name": "kite-order-relay",
+  "version": "2.0.0",
+  "description": "Relay that lets Apps Script place real Kite Connect orders, routed through a static-IP proxy (TrueIP or similar) since that's what Kite requires for order placement specifically.",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js"
+  },
+  "engines": {
+    "node": ">=18"
+  },
+  "dependencies": {
+    "express": "^4.19.2",
+    "https-proxy-agent": "^9.1.0"
+  }
+}
