@@ -82,7 +82,7 @@ app.post('/place-order', async (req, res) => {
   // second-guess the order shape beyond the presence checks above; that validation already
   // happened in kitePlaceOrderFromWeb before this request was ever sent.
   const kiteParams = new URLSearchParams();
-  ['tradingsymbol', 'exchange', 'transaction_type', 'order_type', 'quantity', 'product', 'validity', 'price', 'trigger_price', 'disclosed_quantity', 'squareoff', 'stoploss', 'trailing_stoploss', 'tag']
+  ['tradingsymbol', 'exchange', 'transaction_type', 'order_type', 'quantity', 'product', 'validity', 'price', 'trigger_price', 'disclosed_quantity', 'squareoff', 'stoploss', 'trailing_stoploss', 'tag','market_protection']
     .forEach((k) => { if (body[k] !== undefined && body[k] !== null && body[k] !== '') kiteParams.append(k, body[k]); });
 
   try {
